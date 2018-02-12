@@ -38,27 +38,36 @@ def get_nonce():
     return 0
 
 def bubble_sort(array):
+    "Sorts array with bubble sort algorithm"
 
     j = len(array)
-    print j
 
+    # if only one, no point in iterating
+    if j == 1:
+        return array
+
+    # create two loops, while loop for looping through
+    # arrays everytime and decrementing everytime
+    # for loop to go through the smaller array
     while j > 0:
 
         for i in range(0,j):
+            # if reaching in the end i+1 will cause error
             if i == j-1:
                 break
-            print array
+            #print array
+            # if greater Swap
             if array[i] > array[i+1]:
                 temp = array[i+1]
                 array[i + 1] = array[i]
                 array[i] = temp
 
-
-
-        print j
+        # Decrement j
         j = j - 1
-    print array
-    return 0
+    return array
 
-bubble_sort([10,5,2,1,3])
+
+print bubble_sort([10,6,6,8,9,10,11,12,13,14,20,19,18,17])
+
+print bubble_sort([7,6,6,6,7])
 
