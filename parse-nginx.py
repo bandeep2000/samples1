@@ -1,5 +1,6 @@
 import re
 import pprint
+print "Hello"
 dict1 = {}
 dict2 = {}
 
