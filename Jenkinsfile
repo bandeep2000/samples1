@@ -6,7 +6,10 @@ pipeline {
     stages {
         stage('terraform init') {
             steps {
+                sh 'export PATH=$PATH:~/.local/bin/'
                 sh 'echo Hello'
+                sh 'env'
+                sh 'pylint'
             }
         }
           
