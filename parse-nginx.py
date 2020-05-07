@@ -7,7 +7,7 @@ dict2 = {}
 # Intitialize minute variable, to be used as a flag to reset
 # dictionary1
 initial_min = None
-for l in open("nginx.log"):
+for l in open("nginx.log1"):
   # remove empty spaces caused \n
   l = l.strip()
   if re.search('^(\d+\.\d+\.\d+\.\d+) - - \[(\S+)\s.*\]\s+\"(\w+)\s+(\S+)\s+\S+\s+(\d+).*',l):
