@@ -39,4 +39,8 @@ print isAnagram("hegdb")
 
 print isAnagram("md")
 
+def test1():
+   assert isAnagram("md") == False
+   #assert isAnagram("md") == True
+
 
