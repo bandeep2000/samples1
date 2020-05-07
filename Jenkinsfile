@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    //agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
      //parameters {
     //  string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     //}
