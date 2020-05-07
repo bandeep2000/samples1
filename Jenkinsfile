@@ -3,6 +3,9 @@ pipeline {
      parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     }
+    environment {
+       PATH=$PATH:/var/jenkins_home/.local/bin/'
+   }
     stages {
         stage('terraform init') {
             steps {
