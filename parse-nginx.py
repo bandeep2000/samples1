@@ -5,7 +5,7 @@ dict1 = {}
 dict2 = {}
 
 # Intitialize minute variable, to be used as a flag to reset
-# dictionary
+# dictionary1
 initial_min = None
 for l in open("nginx.log"):
   # remove empty spaces caused \n
