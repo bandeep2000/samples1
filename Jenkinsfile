@@ -9,7 +9,7 @@ pipeline {
                 sh 'export PATH=$PATH:/var/jenkins_home/.local/bin/'
                 sh 'echo Hello'
                 sh 'env'
-                sh '/var/jenkins_home/.local/bin/pylint/pylint'
+                sh '/var/jenkins_home/.local/bin/pylint'
             }
         }
           
