@@ -7,7 +7,7 @@ pipeline {
     //  string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     //}
     stages {
-        stage('terraform init') {
+        stage('test local') {
             steps {
                withEnv(["PATH_BIN=/var/jenkins_home/.local/bin"]) {
                 
@@ -20,6 +20,19 @@ pipeline {
                 sh 'docker build -t python-test .'
                 sh 'docker run --rm  python-test python -m pytest isReverse.py'
                }
+            }
+        }
+
+        stage('Build Docker') {
+            steps {
+                sh 'docker build -t python-test .'
+                sh 'docker run --rm  python-test python -m pytest isReverse.py' 
+            }
+        }
+
+        stage('Test Docker') {
+            steps {
+                sh 'docker run --rm  python-test python -m pytest isReverse.py' 
             }
         }
           
