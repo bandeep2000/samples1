@@ -22,15 +22,17 @@ pipeline {
                 //sh '$PATH_BIN/pylint test1.py'
                 //sh 'python -m pytest isReverse.py --junitxml=path'
                 sh 'python  isReverse.py'
-                sh 'docker ps'
-                sh 'docker build -t python-test .'
-                sh 'docker run --rm  python-test python -m pytest isReverse.py'
+                
                }
             }
         }
 
         stage('Build Docker') {
             steps {
+                
+                sh 'docker ps'
+                sh 'docker build -t python-test .'
+                sh 'docker run --rm  python-test python -m pytest isReverse.py'
                 sh 'docker build -t bandeep2000/python-test .'
                  
             }
