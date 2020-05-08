@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+       
+       DOCKER_PASSWD = credentials('docker-passwd')
+    }
     //agent {
     //    docker { image 'node:7-alpine' }
     //}
@@ -33,6 +37,7 @@ pipeline {
         stage('Test Docker') {
             steps {
                 sh 'docker run --rm  bandeep2000/python-test python -m pytest isReverse.py'
+                sh "docker login -u bandeep2000 -p  $DOCKER_PASSWD"
                 sh 'docker push bandeep2000/python-test' 
             }
         }
