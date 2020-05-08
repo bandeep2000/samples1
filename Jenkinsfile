@@ -18,7 +18,7 @@ pipeline {
                 sh 'python  isReverse.py'
                 sh 'docker ps'
                 sh 'docker build -t python-test .'
-                sh 'docker run --rm -it python-test python -m pytest isReverse.py'
+                sh 'docker run --rm  python-test python -m pytest isReverse.py'
                }
             }
         }
