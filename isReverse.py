@@ -35,9 +35,9 @@ def isAnagram(string1):
 
 
 print isAnagram("hegdo1")
-print isAnagram("hegdb")
+#print isAnagram("hegdb")
 
-print isAnagram("md")
+#print isAnagram("md")
 
 def test1():
    assert isAnagram("md") == False
