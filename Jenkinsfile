@@ -14,7 +14,7 @@ pipeline {
                 sh 'env'
                 //sh '/var/jenkins_home/.local/bin/pylint'
                 //sh '$PATH_BIN/pylint test1.py'
-                sh 'python -m pytest isReverse.py --junitxml=path'
+                //sh 'python -m pytest isReverse.py --junitxml=path'
                 sh 'python  isReverse.py'
                 sh 'docker ps'
                }
