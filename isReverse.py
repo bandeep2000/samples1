@@ -40,7 +40,7 @@ print isAnagram("hegdo1")
 #print isAnagram("md")
 
 def test1():
-   assert isAnagram("md") == False
-   #assert isAnagram("md") == True
+   #assert isAnagram("md") == False
+   assert isAnagram("md") == True
 
 
