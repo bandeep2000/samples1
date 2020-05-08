@@ -25,14 +25,15 @@ pipeline {
 
         stage('Build Docker') {
             steps {
-                sh 'docker build -t python-test .'
-                sh 'docker run --rm  python-test python -m pytest isReverse.py' 
+                sh 'docker build -t bandeep2000/python-test .'
+                 
             }
         }
 
         stage('Test Docker') {
             steps {
-                sh 'docker run --rm  python-test python -m pytest isReverse.py' 
+                sh 'docker run --rm  bandeep2000/python-test python -m pytest isReverse.py'
+                sh 'docker push bandeep2000/python-test' 
             }
         }
           
