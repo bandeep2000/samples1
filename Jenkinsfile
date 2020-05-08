@@ -12,10 +12,9 @@ pipeline {
     //}
     stages {
         stage('test local') {
+            agent {docker 'python:2.7' }
             steps {
-               agent {
-                  docker 'python:2.7' 
-                }
+               
                withEnv(["PATH_BIN=/var/jenkins_home/.local/bin"]) {
                 
                 sh 'env'
