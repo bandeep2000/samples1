@@ -17,6 +17,8 @@ pipeline {
                 //sh 'python -m pytest isReverse.py --junitxml=path'
                 sh 'python  isReverse.py'
                 sh 'docker ps'
+                sh 'docker build -t python-test .'
+                sh 'docker run --rm -it python-test python -m pytest isReverse.py'
                }
             }
         }
