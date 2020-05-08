@@ -13,6 +13,9 @@ pipeline {
     stages {
         stage('test local') {
             steps {
+               agent {
+                  docker { image 'python:2.7' }
+                }
                withEnv(["PATH_BIN=/var/jenkins_home/.local/bin"]) {
                 
                 sh 'env'
