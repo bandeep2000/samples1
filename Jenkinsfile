@@ -29,6 +29,8 @@ pipeline {
 
         stage('Build Docker') {
             steps {
+
+                git credentialsId: '22cea117-6a3d-42ba-8e99-1a654c5ba61a', url: 'https://github.com/bandeep2000/kubernetes-ban.git'
                 
                 sh 'docker ps'
                 sh 'docker build -t python-test .'
