@@ -13,7 +13,7 @@ pipeline {
     //}
     stages {
         stage('test local') {
-            agent {docker 'python:2.7' }
+            //agent {docker 'python:2.7' }
             steps {
                
                withEnv(["PATH_BIN=/var/jenkins_home/.local/bin"]) {
@@ -23,6 +23,7 @@ pipeline {
                 //sh '$PATH_BIN/pylint test1.py'
                 sh 'python -m pytest isReverse.py --junitxml=path'
                 junit 'path'
+                
                 sh 'python  isReverse.py'
                 
                }
