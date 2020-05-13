@@ -41,7 +41,7 @@ pipeline {
                 sh 'git config --global user.email "bandeep2000@gmail.com"'
                 sh  'git config --global user.name "bandeep2000"'
 
-                sed "s/COMMIT_SHA/123/g" test1.yml.tpl > test1.yml
+                //sed "s/COMMIT_SHA/123/g" test1.yml.tpl > test1.yml
 
                 sh 'git commit -m "test1"'
                 //sh 'git push origin master'
