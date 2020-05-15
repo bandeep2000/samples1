@@ -25,6 +25,7 @@ def divideStringReverse(string1):
     return begin_string,revere_end_string
 
 
+# This needs to change, anagram word is wrong here!!!!
 def isAnagram(string1):
 
     begin_string,end_reverse_string = divideStringReverse(string1)
@@ -45,6 +46,9 @@ def test1():
 def test2():
    assert isAnagram("md") == False
    #assert isAnagram("md") == True
+
+def test3():
+  assert isAnagram("madam") == True
 
 
 
