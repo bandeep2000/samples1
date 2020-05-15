@@ -75,16 +75,16 @@ pipeline {
                   
                   script {
                     //sh "git log -1 --pretty=%h > commandResult"
-                    //def result = readFile('commandResult').trim()
-                    //echo "${result}"
-                    //sh "sed \"s/COMMIT_SHA/${result}/g\" test1.yml.tpl > test1.yml"
+                    def result = readFile('../commandResult').trim()
+                    echo "${result}"
+                    sh "sed \"s/COMMIT_SHA/${result}/g\" test1.yml.tpl > test1.yml"
                     sh 'pwd'
                     sh 'ls ../../'
                     sh 'ls ../'
                   
                   }
                  
-                  sh 'touch test1.yml'
+                  //sh 'touch test1.yml'
                   sh 'git add test1.yml'
     
               }
