@@ -4,7 +4,7 @@ pipeline {
        
        DOCKER_PASSWD = credentials('docker-passwd')
        GIT_PASSWD = credentials('github-passwd')
-       GIT_SHA = `git log -1 --pretty=%h`
+       //GIT_SHA = sh '`git log -1 --pretty=%h`'
     }
     //agent {
     //    docker { image 'node:7-alpine' }
@@ -35,7 +35,7 @@ pipeline {
 
                 sh 'docker ps'
                 sh 'docker build -t bandeep2000/python-test:`git log -1 --pretty=%h` .'
-                echo $GIT_SHA
+                sh 'git log -1 --pretty=%h'
                  
             }
         }
