@@ -80,6 +80,7 @@ pipeline {
                     //sh "sed \"s/COMMIT_SHA/${result}/g\" test1.yml.tpl > test1.yml"
                     sh 'pwd'
                     sh 'ls ../../'
+                    sh 'ls ../'
                   
                   }
                  
