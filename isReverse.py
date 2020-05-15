@@ -43,8 +43,8 @@ def test1():
    assert isAnagram("md") == False
    #assert isAnagram("md") == True
 def test2():
-   #assert isAnagram("md") == False
-   assert isAnagram("md") == True
+   assert isAnagram("md") == False
+   #assert isAnagram("md") == True
 
 
 
