@@ -14,7 +14,7 @@ pipeline {
     //}
     stages {
         stage('test local') {
-            //agent {docker 'python:2.7' }
+            agent {docker 'bandeep2000/python' }
             steps {
                
                withEnv(["PATH_BIN=/var/jenkins_home/.local/bin"]) {
