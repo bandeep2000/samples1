@@ -26,7 +26,7 @@ def divideStringReverse(string1):
 
 
 # This needs to change, anagram word is wrong here!!!!
-def isAnagram(string1):
+def isPalindrome(string1):
 
     begin_string,end_reverse_string = divideStringReverse(string1)
 
@@ -35,21 +35,21 @@ def isAnagram(string1):
     return False
 
 
-print isAnagram("hegdo1")
-#print isAnagram("hegdb")
+print isPalindrome("hegdo1")
+#print isPalindrome("hegdb")
 
-#print isAnagram("md")
+#print isPalindrome("md")
 
 def test1():
-   assert isAnagram("md") == False
-   #assert isAnagram("md") == True
+   assert isPalindrome("md") == False
+   #assert isPalindrome("md") == True
 def test2():
-   assert isAnagram("md") == False
-   #assert isAnagram("md") == True
+   assert isPalindrome("md") == False
+   #assert isPalindrome("md") == True
 
 def test3():
-  assert isAnagram("madam") == True
+  assert isPalindrome("madam") == True
 
 
-
-
+def test4():
+  assert isPalindrome("madam") == True
